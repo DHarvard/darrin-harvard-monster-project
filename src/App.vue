@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <v-app>
+        <v-toolbar-title class="headline text-uppercase">
+          <span class="font-weight-bold">Monster</span>
+          <span class="font-weight-light">Project</span>
+          <br>
+          <span class="font-weight-light">Darrin Harvard | DGM3790</span>
+        </v-toolbar-title>
+
+  <v-content>
+    <MonsterProject></MonsterProject>
+  </v-content>
+</v-app>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MonsterProject from './components/MonsterProject';
+import {VApp, VToolbarTitle, VContent, } from 'vuetify/lib'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    MonsterProject,
+    VApp,  
+    VToolbarTitle, 
+    VContent,
+  },
+  data: () => ({
+   //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
